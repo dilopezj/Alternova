@@ -1,3 +1,4 @@
+//create: Donna Lopez - 2023
 import { useEffect, useState } from "react";
 
 import './App.css';
@@ -79,7 +80,7 @@ function App() {
           <Row xs={1} md={1} lg={2}>
             <Col> {alertDiv} <Products handleAddProducts={handleAddProducts} /></Col>
             <Col>
-              <h2><Badge bg="secondary">Cart</Badge></h2>
+              <h2><Badge pill bg="danger">Cart</Badge></h2>
               <ProductsList cartList={cartList} handleRemove={handleRemove} message={message} showMessage={showMessage} />
             </Col>
           </Row>

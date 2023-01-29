@@ -52,7 +52,7 @@ function ListCard({ cartList, handleRemove }) {
   return (
     <div className="container w-100 mb-4" style={cartList.length > 0 ? {} : { display: 'none' }} >
       {alertDiv}
-      <Table striped bordered hover responsive className='ListCard'>
+      <Table striped bordered hover responsive className='ListCard' size="sm">
         <thead>
           <tr key={'head'}>
             <th>Name</th>
