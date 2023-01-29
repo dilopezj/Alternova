@@ -27,7 +27,7 @@ function App() {
   };
 
   const handleAddProducts = cartList => {
-    const tempJson = JSON.parse(localStorage.getItem('cartList'))? JSON.parse(localStorage.getItem('cartList')) : [];
+    const tempJson = JSON.parse(localStorage.getItem('cartList'))? JSON.parse(localStorage.getItem('cartList')) : [{name:'', quantity:0}];
     const tempProduct = tempJson.find(a => a.name === cartList.name);
     if (tempProduct) {
       let tempQuantity = Number(tempProduct.quantity) + 1;
