@@ -20,27 +20,30 @@ function ListCard({ cartList, handleRemove }) {
       "total": total
     }
     //console.log(orderJSON);
+    createJson(orderJSON);
     setShowMessage(true);
     setMessage({ variant: 'success', text: `Order Created - Total to pay: ` + orderJSON.total });
-    
+  };
+  
+  function createJson(orderJSON){
     var json = JSON.stringify(orderJSON);
     json = [json];
     var blob1 = new Blob(json, { type: "text/plain;charset=utf-8" });
 
     var isIE = false || !!document.documentMode;
     if (isIE) {
-      window.navigator.msSaveBlob(blob1, "Customers.json");
+      window.navigator.msSaveBlob(blob1, "Order_price.json");
     } else {
       var url = window.URL || window.webkitURL;
       let link = url.createObjectURL(blob1);
       var a = document.createElement("a");
-      a.download = "Customers.json";
+      a.download = "Order_price.json";
       a.href = link;
       document.body.appendChild(a);
       a.click();
       document.body.removeChild(a);
     }
-  };
+  }
 
   if (showMessage) {
     alertDiv = <Alert variant={message.variant} onClose={() => setShowMessage(false)} dismissible ><p> {message.text} </p> </Alert>;
