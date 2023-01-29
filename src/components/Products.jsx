@@ -15,7 +15,7 @@ function Products({ handleAddProducts }) {
     let productsList = productsJson.products.map((product, i) => (
         <Col key={`${i}-col`} >
             <Card id={`${i}-card`}  >
-                <Card.Img variant="top" src={require(`./../Products_img/` + product.name + `.png`)} alt={product.name} style={{ height: 100 }} />
+                <Card.Img variant="top" src={require(`./../products_img/` + product.name + `.png`)} alt={product.name} style={{ height: 100 }} />
                 <ListGroup className="list-group-flush">
                     <ListGroup.Item>
                         <Container>
