@@ -31,8 +31,10 @@ function Products({ handleAddProducts }) {
     ));
 
     const handleClick = (oneCart) => {
+        if(oneCart){
         const newProduct = { name: oneCart.name, quantity: 1, unit_price: oneCart.unit_price, total_price: oneCart.unit_price, stock: oneCart.stock, completed: false }
         handleAddProducts(newProduct);
+        }
     };   
 
     return (<Container>
