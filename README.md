@@ -4,7 +4,7 @@
 
 Alternova - [Technical challenge] (https://doc.clickup.com/3063428/p/h/2xfm4-21745/f3526a6ca082cce)
 
-![screenshot project](https://github.com/dilopezj/Alternova/blob/master/src/products_img/alternova.png)
+![screenshot project](https://github.com/dilopezj/Alternova/blob/main/src/products_img/alternova.png?raw=true)
 
 
 ## Building and Running Open
