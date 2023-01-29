@@ -41,13 +41,12 @@ function App() {
     } else {
       if (cartList.stock === 0) {
         setShowMessage(true);
-        setMessage({ variant: 'warning', text: `You can not add more items of this product: ` + tempProduct.name });
+        setMessage({ variant: 'warning', text: `You can not add more items of this product ` });
       } else {
         setShowMessage(false);
         setMessage({ variant: '', text: '' });
         setCartList(prevProducts => [cartList, ...prevProducts]);
       }
-
     }
   };
 
